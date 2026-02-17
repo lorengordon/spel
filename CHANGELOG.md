@@ -1,5 +1,17 @@
 ## Changelog
 
+### [2026.02.1](https://github.com/plus3it/spel/releases/tag/2026.02.1)
+
+**Released**: 2026.02.17
+
+**Manifests**: <https://github.com/plus3it/spel/blob/2026.02.1/manifests>
+
+**Summary**:
+*   Amazon Linux 2023.10.20260202
+*   "Extra" packages updated in this release:
+    - aws-cli/2.33.23
+    - ec2-hibinit-agent-1.0.10-1
+
 ### [2026.01.1](https://github.com/plus3it/spel/releases/tag/2026.01.1)
 
 **Released**: 2026.01.20

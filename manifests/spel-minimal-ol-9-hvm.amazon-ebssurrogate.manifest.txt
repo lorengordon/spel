@@ -1,5 +1,5 @@
 Oracle Linux Server 9.7
-aws-cli/2.33.2 Python/3.13.11 Linux/5.14.0-362.24.1.0.1.el9_3.x86_64 exe/x86_64.oracle.9
+aws-cli/2.33.23 Python/3.13.11 Linux/5.14.0-362.24.1.0.1.el9_3.x86_64 exe/x86_64.oracle.9
 aws-cfn-bootstrap 2.0
 NetworkManager-1.54.0-3.0.1.el9_7.x86_64
 NetworkManager-libnm-1.54.0-3.0.1.el9_7.x86_64
@@ -26,7 +26,7 @@ c-ares-1.19.1-2.el9_4.x86_64
 ca-certificates-2025.2.80_v9.0.305-91.el9.noarch
 checkpolicy-3.6-1.el9.x86_64
 chrony-4.6.1-2.0.1.el9.x86_64
-cloud-init-24.4-7.0.1.el9.noarch
+cloud-init-24.4-7.0.1.el9_7.1.noarch
 cloud-utils-growpart-0.33-1.el9.x86_64
 coreutils-8.32-39.0.1.el9.x86_64
 coreutils-common-8.32-39.0.1.el9.x86_64
@@ -39,7 +39,7 @@ crontabs-1.11-27.20190603git.el9_0.noarch
 crypto-policies-20250905-1.git377cc42.el9_7.noarch
 crypto-policies-scripts-20250905-1.git377cc42.el9_7.noarch
 cryptsetup-libs-2.7.2-4.el9.x86_64
-curl-7.76.1-34.el9.x86_64
+curl-7.76.1-35.el9_7.3.x86_64
 cyrus-sasl-lib-2.1.27-22.el9.x86_64
 dbus-1.12.20-8.0.1.el9.x86_64
 dbus-broker-28-7.el9.x86_64
@@ -65,7 +65,7 @@ dracut-network-057-104.git20250919.0.1.el9_7.x86_64
 dracut-squash-057-104.git20250919.0.1.el9_7.x86_64
 e2fsprogs-1.46.5-8.el9.x86_64
 e2fsprogs-libs-1.46.5-8.el9.x86_64
-ec2-hibinit-agent-1.0.10-0.el9.x86_64
+ec2-hibinit-agent-1.0.10-1.el9.x86_64
 ec2-utils-2.2.0-1.el9.0.2.x86_64
 efi-filesystem-6-4.0.1.el9.noarch
 efibootmgr-16-12.0.1.el9.x86_64
@@ -94,7 +94,7 @@ geolite2-city-20191217-6.el9.noarch
 geolite2-country-20191217-6.el9.noarch
 gettext-0.21-8.el9.x86_64
 gettext-libs-0.21-8.el9.x86_64
-glib2-2.68.4-18.el9_7.x86_64
+glib2-2.68.4-18.el9_7.1.x86_64
 glibc-2.34-231.0.1.el9_7.2.x86_64
 glibc-common-2.34-231.0.1.el9_7.2.x86_64
 glibc-gconv-extra-2.34-231.0.1.el9_7.2.x86_64
@@ -142,18 +142,18 @@ json-glib-1.6.6-1.el9.x86_64
 kbd-2.4.0-11.el9.x86_64
 kbd-legacy-2.4.0-11.el9.noarch
 kbd-misc-2.4.0-11.el9.noarch
-kernel-5.14.0-611.20.1.el9_7.x86_64
-kernel-core-5.14.0-611.20.1.el9_7.x86_64
-kernel-modules-5.14.0-611.20.1.el9_7.x86_64
-kernel-modules-core-5.14.0-611.20.1.el9_7.x86_64
-kernel-tools-5.14.0-611.20.1.el9_7.x86_64
-kernel-tools-libs-5.14.0-611.20.1.el9_7.x86_64
+kernel-5.14.0-611.30.1.el9_7.x86_64
+kernel-core-5.14.0-611.30.1.el9_7.x86_64
+kernel-modules-5.14.0-611.30.1.el9_7.x86_64
+kernel-modules-core-5.14.0-611.30.1.el9_7.x86_64
+kernel-tools-5.14.0-611.30.1.el9_7.x86_64
+kernel-tools-libs-5.14.0-611.30.1.el9_7.x86_64
 kexec-tools-2.0.31-1.0.2.el9_6.x86_64
 keyutils-1.6.3-1.el9.x86_64
 keyutils-libs-1.6.3-1.el9.x86_64
 kmod-28-11.0.1.el9.x86_64
 kmod-libs-28-11.0.1.el9.x86_64
-kpartx-0.8.7-39.el9.x86_64
+kpartx-0.8.7-39.el9_7.1.x86_64
 krb5-libs-1.21.1-8.0.1.el9_6.x86_64
 less-590-6.el9.x86_64
 libacl-2.3.1-4.el9.x86_64
@@ -163,7 +163,7 @@ libassuan-2.5.5-3.el9.x86_64
 libatasmart-0.19-22.el9.x86_64
 libattr-2.5.1-3.el9.x86_64
 libbasicobjects-0.1.1-53.el9.x86_64
-libblkid-2.37.4-21.0.1.el9.x86_64
+libblkid-2.37.4-21.0.1.el9_7.x86_64
 libblockdev-2.28-14.0.1.el9_6.x86_64
 libblockdev-crypto-2.28-14.0.1.el9_6.x86_64
 libblockdev-fs-2.28-14.0.1.el9_6.x86_64
@@ -173,7 +173,7 @@ libblockdev-part-2.28-14.0.1.el9_6.x86_64
 libblockdev-swap-2.28-14.0.1.el9_6.x86_64
 libblockdev-utils-2.28-14.0.1.el9_6.x86_64
 libbpf-1.5.0-1.el9.x86_64
-libbrotli-1.0.9-7.el9_5.x86_64
+libbrotli-1.0.9-9.el9_7.x86_64
 libbytesize-2.5-3.el9.x86_64
 libcap-2.48-10.el9.x86_64
 libcap-ng-0.8.2-7.el9.x86_64
@@ -182,7 +182,7 @@ libcbor-0.7.0-5.el9.x86_64
 libcollection-0.7.0-53.el9.x86_64
 libcom_err-1.46.5-8.el9.x86_64
 libcomps-0.1.18-1.el9.x86_64
-libcurl-7.76.1-34.el9.x86_64
+libcurl-7.76.1-35.el9_7.3.x86_64
 libdaemon-0.14-23.el9.x86_64
 libdb-5.3.28-57.0.1.el9_6.x86_64
 libdhash-0.5.0-53.el9.x86_64
@@ -192,12 +192,12 @@ libedit-3.1-38.20210216cvs.el9.x86_64
 libestr-0.1.11-4.el9.x86_64
 libevent-2.1.12-8.el9_4.x86_64
 libfastjson-0.99.9-5.el9.x86_64
-libfdisk-2.37.4-21.0.1.el9.x86_64
+libfdisk-2.37.4-21.0.1.el9_7.x86_64
 libffi-3.4.2-8.el9.x86_64
 libfido2-1.13.0-2.el9.x86_64
-libgcc-11.5.0-11.0.1.el9.x86_64
+libgcc-11.5.0-11.0.2.el9.x86_64
 libgcrypt-1.10.0-11.el9.x86_64
-libgomp-11.5.0-11.0.1.el9.x86_64
+libgomp-11.5.0-11.0.2.el9.x86_64
 libgpg-error-1.42-5.el9.x86_64
 libgudev-237-1.el9.x86_64
 libgusb-0.3.8-2.el9.x86_64
@@ -212,7 +212,7 @@ libldb-4.22.4-6.el9_7.x86_64
 libmaxminddb-1.5.2-4.el9.x86_64
 libmnl-1.0.4-16.el9_4.x86_64
 libmodulemd-2.13.0-2.el9.x86_64
-libmount-2.37.4-21.0.1.el9.x86_64
+libmount-2.37.4-21.0.1.el9_7.x86_64
 libndp-1.9-1.el9.x86_64
 libnetfilter_conntrack-1.0.9-1.el9.x86_64
 libnfnetlink-1.0.1-23.el9_5.x86_64
@@ -236,7 +236,7 @@ libselinux-utils-3.6-3.el9.x86_64
 libsemanage-3.6-5.el9_6.x86_64
 libsepol-3.6-3.el9.x86_64
 libsigsegv-2.13-4.el9.x86_64
-libsmartcols-2.37.4-21.0.1.el9.x86_64
+libsmartcols-2.37.4-21.0.1.el9_7.x86_64
 libsolv-0.7.24-3.el9.x86_64
 libss-1.46.5-8.el9.x86_64
 libssh-0.10.4-17.el9_7.x86_64
@@ -245,7 +245,7 @@ libsss_certmap-2.9.7-4.0.1.el9_7.1.x86_64
 libsss_idmap-2.9.7-4.0.1.el9_7.1.x86_64
 libsss_nss_idmap-2.9.7-4.0.1.el9_7.1.x86_64
 libsss_sudo-2.9.7-4.0.1.el9_7.1.x86_64
-libstdc++-11.5.0-11.0.1.el9.x86_64
+libstdc++-11.5.0-11.0.2.el9.x86_64
 libsysfs-2.1.1-11.el9.x86_64
 libtalloc-2.4.3-1.el9.x86_64
 libtasn1-4.16.0-9.el9.x86_64
@@ -259,7 +259,7 @@ libunistring-0.9.10-15.el9.x86_64
 libusbx-1.0.26-1.el9.x86_64
 libuser-0.63-17.el9.x86_64
 libutempter-1.2.1-6.el9.x86_64
-libuuid-2.37.4-21.0.1.el9.x86_64
+libuuid-2.37.4-21.0.1.el9_7.x86_64
 libverto-0.3.2-3.el9.x86_64
 libwbclient-4.22.4-6.el9_7.x86_64
 libxcrypt-4.4.18-3.el9.x86_64
@@ -282,7 +282,7 @@ lz4-libs-1.9.3-5.el9.x86_64
 lzo-2.10-7.el9.x86_64
 man-db-2.9.3-9.el9.x86_64
 mdadm-4.4-2.0.1.el9.x86_64
-microcode_ctl-20250812-1.0.1.el9.noarch
+microcode_ctl-20250812-1.20251111.1.0.1.el9_7.noarch
 mokutil-0.7.2-1.el9.x86_64
 mpfr-4.1.0-7.el9.x86_64
 ncurses-6.2-12.20210508.el9.x86_64
@@ -306,10 +306,10 @@ openldap-2.6.8-4.el9.x86_64
 openssh-8.7p1-47.0.1.el9_7.x86_64
 openssh-clients-8.7p1-47.0.1.el9_7.x86_64
 openssh-server-8.7p1-47.0.1.el9_7.x86_64
-openssl-3.5.1-5.0.1.el9_7.x86_64
+openssl-3.5.1-7.0.1.el9_7.x86_64
 openssl-fips-provider-3.0.7-8.0.1.el9.x86_64
 openssl-fips-provider-so-3.0.7-8.0.1.el9.x86_64
-openssl-libs-3.5.1-5.0.1.el9_7.x86_64
+openssl-libs-3.5.1-7.0.1.el9_7.x86_64
 oraclelinux-release-9.7-1.0.6.el9.x86_64
 oraclelinux-release-el9-1.0-26.el9.x86_64
 os-prober-1.77-12.0.1.el9_5.x86_64
@@ -333,8 +333,8 @@ prefixdevname-0.1.0-8.el9.x86_64
 procps-ng-3.3.17-14.0.1.el9.x86_64
 psmisc-23.4-3.el9.x86_64
 publicsuffix-list-dafsa-20210518-3.el9.noarch
-python-unversioned-command-3.9.25-2.0.1.el9_7.noarch
-python3-3.9.25-2.0.1.el9_7.x86_64
+python-unversioned-command-3.9.25-3.0.1.el9_7.noarch
+python3-3.9.25-3.0.1.el9_7.x86_64
 python3-attrs-20.3.0-7.0.1.el9.noarch
 python3-audit-3.1.5-7.0.1.el9.x86_64
 python3-babel-2.9.1-2.el9.noarch
@@ -359,7 +359,7 @@ python3-jsonschema-3.2.0-13.el9.noarch
 python3-kmod-0.9-32.el9.x86_64
 python3-libcomps-0.1.18-1.el9.x86_64
 python3-libdnf-0.69.0-16.0.1.el9.x86_64
-python3-libs-3.9.25-2.0.1.el9_7.x86_64
+python3-libs-3.9.25-3.0.1.el9_7.x86_64
 python3-libselinux-3.6-3.el9.x86_64
 python3-libsemanage-3.6-5.el9_6.x86_64
 python3-markupsafe-1.1.1-12.el9.x86_64
@@ -383,7 +383,7 @@ python3-setuptools-53.0.0-15.el9.noarch
 python3-setuptools-wheel-53.0.0-15.el9.noarch
 python3-six-1.15.0-9.0.1.el9.noarch
 python3-systemd-234-19.el9.x86_64
-python3-urllib3-1.26.5-6.el9.noarch
+python3-urllib3-1.26.5-6.el9_7.1.noarch
 python3-urwid-2.1.2-4.el9.x86_64
 readline-8.1-4.el9.x86_64
 redhat-release-9.7-0.6.0.1.el9.x86_64
@@ -409,7 +409,7 @@ sg3_utils-1.47-10.el9.x86_64
 sg3_utils-libs-1.47-10.el9.x86_64
 shadow-utils-4.9-15.el9.x86_64
 shared-mime-info-2.1-5.el9.x86_64
-shim-x64-15.8-1.0.5.el9_4.x86_64
+shim-x64-16.1-1.0.2.el9.x86_64
 slang-2.3.2-11.el9.x86_64
 snappy-1.1.8-8.el9.x86_64
 spel-dod-certs-5.13-1.el9.noarch
@@ -433,8 +433,8 @@ tzdata-2025c-1.el9.noarch
 udisks2-2.9.4-12.0.1.el9_7.x86_64
 unzip-6.0-59.0.1.el9.x86_64
 userspace-rcu-0.12.1-6.el9.x86_64
-util-linux-2.37.4-21.0.1.el9.x86_64
-util-linux-core-2.37.4-21.0.1.el9.x86_64
+util-linux-2.37.4-21.0.1.el9_7.x86_64
+util-linux-core-2.37.4-21.0.1.el9_7.x86_64
 vim-minimal-8.2.2637-23.0.1.el9_7.x86_64
 virt-what-1.27-2.el9.x86_64
 volume_key-libs-0.3.12-16.el9.x86_64
