@@ -1,5 +1,18 @@
 ## Changelog
 
+### [2026.07.1](https://github.com/plus3it/spel/releases/tag/2026.07.1)
+
+**Released**: 2026.07.21
+
+**Manifests**: <https://github.com/plus3it/spel/blob/2026.07.1/manifests>
+
+**Summary**:
+
+*   "Extra" packages updated in this release:
+    - aws-cli/2.36.4
+    - spel-dod-certs-5.14-1
+    - spel-wcf-certs-5.18-1
+
 ### [2026.06.1](https://github.com/plus3it/spel/releases/tag/2026.06.1)
 
 **Released**: 2026.06.30
