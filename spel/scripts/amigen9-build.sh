@@ -218,13 +218,8 @@ function BuildChroot {
     case "${CLOUDPROVIDER}" in
         # Invoke AWSutils installer
         aws)
-            if [[ "${BUILDER}" == "amzn-2023" ]]
-            then
-                err_exit "Detected Amazon Linux 2023 platform; skipping AWSutils.sh" NONE
-            else
-                bash -euxo pipefail "${ELBUILD}"/$( ComposeAWSutilsString ) || \
-                    err_exit "Failure encountered with AWSutils.sh"
-            fi
+            bash -euxo pipefail "${ELBUILD}"/$( ComposeAWSutilsString ) || \
+                err_exit "Failure encountered with AWSutils.sh"
             ;;
         azure)
             (
@@ -274,12 +269,17 @@ function CollectManifest {
     then
         if [[ -n "$AWSCLIV1SOURCE" ]]
         then
-            echo "Saving the aws-cli-v1 version to the manifest"
-            [[ -o xtrace ]] && XTRACE='set -x' || XTRACE='set +x'
-            set +x
-            (chroot "${AMIGENCHROOT}" /usr/local/bin/aws1 --version) 2>&1 | \
-                tee -a /tmp/manifest.txt
-            eval "$XTRACE"
+            if [[ "${BUILDER}" == "amzn-2023" ]]
+            then
+                err_exit "Skipping aws-cli-v1 manifest check on Amazon Linux 2023" NONE
+            else
+                echo "Saving the aws-cli-v1 version to the manifest"
+                [[ -o xtrace ]] && XTRACE='set -x' || XTRACE='set +x'
+                set +x
+                (chroot "${AMIGENCHROOT}" /usr/local/bin/aws1 --version) 2>&1 | \
+                    tee -a /tmp/manifest.txt
+                eval "$XTRACE"
+            fi
         fi
         if [[ -n "$AWSCLIV2SOURCE" ]]
         then
@@ -333,13 +333,23 @@ function ComposeAWSutilsString {
     # Whether to install AWS CLIv1
     if [[ -n "${AWSCLIV1SOURCE}" ]]
     then
-        AWSUTILSSTRING+="-C ${AWSCLIV1SOURCE} "
+        if [[ "${BUILDER}" == "amzn-2023" ]]
+        then
+            err_exit "Skipping install of AWS CLIv1 on Amazon Linux 2023" NONE
+        else
+            AWSUTILSSTRING+="-C ${AWSCLIV1SOURCE} "
+        fi
     fi
 
     # Whether to install AWS CLIv2
     if [[ -n "${AWSCLIV2SOURCE}" ]]
     then
-        AWSUTILSSTRING+="-c ${AWSCLIV2SOURCE} "
+        if [[ "${BUILDER}" == "amzn-2023" ]]
+        then
+            err_exit "Skipping install of AWS CLIv2 on Amazon Linux 2023" NONE
+        else
+            AWSUTILSSTRING+="-c ${AWSCLIV2SOURCE} "
+        fi
     fi
 
     # Whether to install AWS SSM-agent
@@ -350,10 +360,10 @@ function ComposeAWSutilsString {
         AWSUTILSSTRING+="-s ${AMIGENSSMAGENT} "
     fi
 
-    # Whether to install AWS InstanceConnect
+    # Whether to install AWS Instance Connect
     if [[ -z ${AMIGENICNCTURL:-} ]]
     then
-        err_exit "Skipping install of AWS SSM-agent" NONE
+        err_exit "Skipping install of AWS Instance Connect" NONE
     else
         AWSUTILSSTRING+="-i ${AMIGENICNCTURL} "
     fi
