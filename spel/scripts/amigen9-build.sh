@@ -218,8 +218,13 @@ function BuildChroot {
     case "${CLOUDPROVIDER}" in
         # Invoke AWSutils installer
         aws)
-            bash -euxo pipefail "${ELBUILD}"/$( ComposeAWSutilsString ) || \
-                err_exit "Failure encountered with AWSutils.sh"
+            if [[ "${BUILDER}" == "amzn-2023" ]]
+            then
+                err_exit "Detected Amazon Linux 2023 platform; skipping AWSutils.sh" NONE
+            else
+                bash -euxo pipefail "${ELBUILD}"/$( ComposeAWSutilsString ) || \
+                    err_exit "Failure encountered with AWSutils.sh"
+            fi
             ;;
         azure)
             (
