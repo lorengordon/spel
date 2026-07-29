@@ -258,6 +258,14 @@ function BuildChroot {
 
 # Create a record of the build
 function CollectManifest {
+    local AWSCLIV2BIN="/usr/local/bin/aws2"
+
+    if [[ "${BUILDER}" == "amzn-2023" ]]
+    then
+        # AL2023 installs AWS CLI v2 as /usr/bin/aws
+        AWSCLIV2BIN="/usr/bin/aws"
+    fi
+
     echo "Saving the release info to the manifest"
     grep "PRETTY_NAME=" "${AMIGENCHROOT}/etc/os-release" | \
         cut --delimiter '"' -f2 > /tmp/manifest.txt
@@ -278,7 +286,7 @@ function CollectManifest {
             echo "Saving the aws-cli-v2 version to the manifest"
             [[ -o xtrace ]] && XTRACE='set -x' || XTRACE='set +x'
             set +x
-            (chroot "${AMIGENCHROOT}" /usr/local/bin/aws2 --version) 2>&1 | \
+            (chroot "${AMIGENCHROOT}" "${AWSCLIV2BIN}" --version) 2>&1 | \
                 tee -a /tmp/manifest.txt
             eval "$XTRACE"
         fi
