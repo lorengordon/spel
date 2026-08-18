@@ -1,5 +1,22 @@
 ## Changelog
 
+### [2026.08.1](https://github.com/plus3it/spel/releases/tag/2026.08.1)
+
+**Released**: 2026.08.21
+
+**Manifests**: <https://github.com/plus3it/spel/blob/2026.08.1/manifests>
+
+**Summary**:
+
+*   Amazon Linux 2023.12.20260817
+*   Amazon Linux 2023 images use the awscli from the distribution's yum repos,
+    instead of installing a second package from zip archive
+    - https://github.com/plus3it/spel/pull/835
+*   "Extra" packages updated in this release:
+    - aws-cli/2.36.25
+    - amazon-ssm-agent-3.3.4851.0-1
+    - ec2-hibinit-agent-1.0.11-0
+
 ### [2026.07.1](https://github.com/plus3it/spel/releases/tag/2026.07.1)
 
 **Released**: 2026.07.21
